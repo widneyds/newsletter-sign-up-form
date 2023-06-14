@@ -22,3 +22,106 @@ body {
 ul {
     list-style: none;
 }
+
+.l-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: start;
+    justify-items: center;
+}
+
+.l-banner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.l-info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 5%;
+}
+
+.l-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    place-self: end;
+    margin-bottom: 35%;
+}
+
+.c-banner {
+    width: 767px;
+    max-width: 100%;
+}
+
+.c-banner-desktop {
+    display: none;
+}
+
+.c-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-list__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.c-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 450px;
+}
+
+.c-form__email-title {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.c-form__email-input {
+    height: 50px;
+    padding: 15px;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    outline: 0;
+}
+
+.c-form__email-input:focus {
+    border: 1px solid var(--charcoal-grey);
+}
+
+.c-form__button {
+    height: 50px;
+    border: 0;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+}
+
+.c-form__button:hover {
+    background-color: var(--tomato);
+}
+
+@media screen and (min-width: 768px) {
+    .l-banner {
+        height: auto;
+        overflow: visible;
+    }
+    .c-banner {
+        display: none;
+    }
+    
+    .c-banner-desktop {
+        display: block;
+    }
+}
