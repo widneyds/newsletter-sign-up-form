@@ -35,4 +35,5 @@ form.addEventListener('submit', event => {
 
 dismissMessage.addEventListener('click', () => {
     successMessage.style.display = 'none'
+    form.email.value = ''
 })
