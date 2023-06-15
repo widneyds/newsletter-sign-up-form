@@ -58,6 +58,19 @@ ul {
     margin-bottom: 35%;
 }
 
+.l-success {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+}
+
 .c-banner {
     width: 767px;
     max-width: 100%;
@@ -104,15 +117,51 @@ ul {
     border: 1px solid var(--charcoal-grey);
 }
 
-.c-form__button {
-    height: 50px;
+.c-button {
+    padding: 15px;
     border: 0;
+    border-radius: 10px;
     background-color: var(--dark-slate-grey);
     color: var(--white);
+    cursor: pointer;
 }
 
-.c-form__button:hover {
-    background-color: var(--tomato);
+.u-input--error {
+    border-color: var(--tomato);
+    background-color: #fad8d8;
+    color: #ff3939;
+}
+
+.u-input--error:focus {
+    border-color:var(--tomato);
+}
+
+.c-button:hover {
+    background: linear-gradient(90deg, var(--tomato), hsl(4, 100%, 55%));
+    box-shadow: 1px 20px 23px hsl(4, 100%, 88%);
+    transform: scale(1.01);
+}
+
+.c-success {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20%;
+}
+
+.c-success__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8%;
+    gap: 25px;
+}
+
+.c-success .c-button {
+    width: 300px;
+    max-width: 80%;
 }
 
 @media screen and (min-width: 768px) {
@@ -123,6 +172,7 @@ ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        overflow: hidden;
     }
 
     .l-banner {
@@ -145,6 +195,19 @@ ul {
         margin-bottom: 0;
     }
 
+    .l-success {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
     .c-banner {
         display: none;
     }
@@ -162,6 +225,18 @@ ul {
     .c-description {
         width: 90%;
         text-align: center;
+    }
+
+    .c-success {
+        width: 500px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10%;
+        background-color: var(--white);
+        border-radius: 40px;
     }
 }
 
