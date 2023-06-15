@@ -103,6 +103,13 @@ ul {
 .c-form__email-title {
     font-weight: 700;
     font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.u-email-title--error {
+    color: #ff3939;
+    display: none;
 }
 
 .c-form__email-input {
@@ -157,6 +164,10 @@ ul {
     align-items: flex-start;
     padding: 8%;
     gap: 25px;
+}
+
+.c-description span {
+    font-weight: 700;
 }
 
 .c-success .c-button {
